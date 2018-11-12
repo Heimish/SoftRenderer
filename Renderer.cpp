@@ -36,8 +36,50 @@ void UpdateFrame(void)
 	SetColor(32, 128, 255);
 	Clear();
 
-	// Draw
+	float Cradius = 50.0f;
+	int Cnradius = (int)Cradius;
+	Vector3 center(0.0f, 0.0f);
 
+	// Circle
+	static float Cdegree = 0;
+	Cdegree += -1;
+	Cdegree = fmodf(Cdegree, 360.0f);
+
+	Matrix3 circleMoveMatrix;
+	circleMoveMatrix.SetTranslation(0.f, 0.f);
+
+	float CmaxPos = 150;
+	float Cpos = sinf(Deg2Rad(Cdegree)) * CmaxPos;
+	Matrix3 circleRotationMatrix;
+	circleRotationMatrix.SetTranslation(Cpos, Cpos);
+
+	Matrix3 circleMatrix = circleRotationMatrix * circleMoveMatrix;
+
+	// Circle Color
+	static Vector3 Ccor;
+	Ccor.X += 1;
+	Ccor.Y += 0.5f;
+	Ccor.Z += 1;
+
+	Ccor.X = fmodf(Ccor.X, 155.0f);
+	Ccor.Y = fmodf(Ccor.Y, 255.0f);
+	Ccor.Z = fmodf(Ccor.Z, 105.0f);
+
+	SetColor(Ccor.X, Ccor.Y, Ccor.Z);
+
+	// Circle Draw
+	for (int i = -Cnradius; i <= Cnradius; i++)
+	{
+		for (int j = -Cnradius; j <= Cnradius; j++)
+		{
+			Vector3 vertex(i, j);
+			if (Vector3::Dist(center, vertex) <= Cradius)
+				PutPixel(Vector3(i, j) * circleMatrix);
+		}
+	}
+
+
+	// Draw
 	static Vector3 cor;
 	cor.X += 0.7f;
 	cor.Y += 0.5f;
@@ -50,7 +92,6 @@ void UpdateFrame(void)
 	SetColor(cor.X, cor.Y, cor.Z);
 
 	// Draw a filled circle with radius 100
-	Vector3 center(0.0f, 0.0f);
 	float radius = 100.0f;
 	int nradius = (int)radius;
 

@@ -1,4 +1,7 @@
 ﻿  Renderer.cpp
-c:\users\400-025\downloads\softrenderer_step4\renderer.cpp(50): warning C4244: '인수': 'float'에서 'BYTE'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\400-025\downloads\softrenderer_step4\renderer.cpp(66): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  SoftRenderer.vcxproj -> C:\Users\400-025\Downloads\SoftRenderer_Step4\x64\Debug\SoftRenderer.exe
+c:\users\400-025\downloads\softrenderer_jjw\renderer.cpp(68): warning C4244: '인수': 'float'에서 'BYTE'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\400-025\downloads\softrenderer_jjw\renderer.cpp(75): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\400-025\downloads\softrenderer_jjw\renderer.cpp(77): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\400-025\downloads\softrenderer_jjw\renderer.cpp(92): warning C4244: '인수': 'float'에서 'BYTE'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\400-025\downloads\softrenderer_jjw\renderer.cpp(107): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  SoftRenderer.vcxproj -> C:\Users\400-025\Downloads\SoftRenderer_JJW\x64\Debug\SoftRenderer.exe
